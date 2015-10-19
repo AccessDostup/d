@@ -1,7 +1,7 @@
 #ifndef _MYSQL_LIB_H
 #define	_MYSQL_LIB_H
 
-#include "mysql_connection.h"
+#include <mysql_connection.h>
 
 #include <cppconn/driver.h>
 #include <cppconn/exception.h>
