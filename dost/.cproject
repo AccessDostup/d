@@ -82,6 +82,7 @@
 								<option id="gnu.cpp.compiler.option.dialect.std.619008812" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.371040939" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\MySQL\MySQL Connector C++ 1.1.6\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\MinGW\boost_1_59_0&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files\MySQL\MySQL Connector C++ 1.1.6\include&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.289878349" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -99,6 +100,7 @@
 								</option>
 								<option id="gnu.cpp.link.option.paths.20601689" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\MySQL\MySQL Connector C++ 1.1.6\lib\opt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\MinGW\boost_1_59_0\libs&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.748930826" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

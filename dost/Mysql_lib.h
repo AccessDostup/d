@@ -43,10 +43,9 @@ class Mysql_lib
 
 public:
 	static bool Connect();
-	static bool Queryupdateinsert(const string& query);
-	static ResQuery Queryselect(const string& query);
+	//static bool Queryupdateinsert(const string& query);
+	//static ResQuery Queryselect(const string& query);
 };
-
 }
 
 #endif

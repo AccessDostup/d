@@ -36,9 +36,10 @@ bool Mysql_lib::Connect()
 	  return false;
 	}
 }
-
+/*
 bool Mysql_lib::Queryupdateinsert(const string& query)
 {
+
 	  pstmt = con->prepareStatement("INSERT INTO test(id) VALUES (?)");
 	  for (int i = 1; i <= 10; i++) {
 	    pstmt->setInt(1, i);
@@ -64,6 +65,6 @@ ResQuery Mysql_lib::Queryselect(const string& query)
     if(ressource.res == NULL)
        ressource.err = true;
     return ressource;
-}
+}*/
 
 }
