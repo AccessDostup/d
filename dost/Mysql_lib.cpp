@@ -21,7 +21,7 @@ bool Mysql_lib::Connect()
 {
    	try
 	{
-   	  con = driver->connect("tcp://127.0.0.1:3306", "root", "root");
+   	  con = driver->connect("TCP://127.0.0.1:3306", "root", "root");
     } catch (sql::SQLException &e) {
 	  cout<<"ERR: NO CONNECT MySQL";
 	  return false;
