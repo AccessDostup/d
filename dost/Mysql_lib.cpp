@@ -5,12 +5,7 @@
 	(c) 2009 Alexander "Mad Fish" Chehovsky
 	See License.txt for licensing information.
 */
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
-
 #include "Mysql_lib.h"
-#include <stdlib.h>
 
 using namespace std;
 
@@ -22,7 +17,7 @@ bool Mysql_lib::Connect()
    	try
 	{
    	  con = driver->connect("TCP://127.0.0.1:3306", "root", "root");
-    } catch (sql::SQLException &e) {
+    } catch (SQLException &e) {
 	  cout<<"ERR: NO CONNECT MySQL";
 	  return false;
 	}
@@ -31,7 +26,7 @@ bool Mysql_lib::Connect()
 	{
    	  con->setSchema("test");
    	  return true;
-    } catch (sql::SQLException &e) {
+    } catch (SQLException &e) {
 	  cout<<"ERR: NO BD IN MySQL";
 	  return false;
 	}

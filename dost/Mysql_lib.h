@@ -1,3 +1,4 @@
+#pragma once
 #ifndef _MYSQL_LIB_H
 #define	_MYSQL_LIB_H
 
@@ -16,13 +17,14 @@
 #endif
 
 using namespace std;
+using namespace sql;
 
 namespace CoreToolkit
 {
 
 struct ResQuery
 {
-	sql::ResultSet *res;
+	ResultSet *res;
 	bool err;
 };
 
@@ -30,19 +32,19 @@ struct InsertQuery
 {
 	string *NameTable;
 
-	sql::ResultSet *res;
+	ResultSet *res;
 	bool err;
 };
 
 class Mysql_lib
 {
-  sql::Driver *driver;
-  sql::Connection *con;
-  sql::Statement *stmt;
-  sql::PreparedStatement *pstmt;
+  Driver *driver;
+  Connection *con;
+  Statement *stmt;
+  PreparedStatement *pstmt;
 
 public:
-	static bool Connect();
+	bool Connect();
 	//static bool Queryupdateinsert(const string& query);
 	//static ResQuery Queryselect(const string& query);
 };

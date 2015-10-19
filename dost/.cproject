@@ -28,6 +28,7 @@
 								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.1621138763" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1180382723" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\MySQL\MySQL Connector C++ 1.1.6\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\MinGW\boost_1_59_0&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files\MySQL\MySQL Connector C++ 1.1.6\include&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1885216662" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -41,9 +42,11 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.495319819" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
 								<option id="gnu.cpp.link.option.libs.446282458" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="&quot;wsock32&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mysqlcppconn-static"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1477970510" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\MySQL\MySQL Connector C++ 1.1.6\lib\opt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\MinGW\boost_1_59_0\libs&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1272976233" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -97,6 +100,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release.148827091" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release">
 								<option id="gnu.cpp.link.option.libs.2014705152" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="&quot;wsock32&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;mysqlcppconn-static&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.20601689" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\MySQL\MySQL Connector C++ 1.1.6\lib\opt&quot;"/>
