@@ -21,26 +21,35 @@ bool Mysql_lib::Connect()
 {
    	try
 	{
-        mysql_init(&conn);
-        mysql_real_connect(&conn, "localhost", "root", "", "shop", 0, NULL, 0);
-    }
-    catch(exception& e)
-	{
-		LOG(LogError)<<e.what();
-		return false;
+   	  con = driver->connect("tcp://127.0.0.1:3306", "root", "root");
+    } catch (sql::SQLException &e) {
+	  cout<<"ERR: NO CONNECT MySQL";
+	  return false;
 	}
-        mysql_query(&conn, "SET NAMES 'utf8'");
 
-	return true;
+   	try
+	{
+   	  con->setSchema("test");
+   	  return true;
+    } catch (sql::SQLException &e) {
+	  cout<<"ERR: NO BD IN MySQL";
+	  return false;
+	}
 }
 
-bool Mysql_lib::Queryupdateinsert(const std::string& query)
+bool Mysql_lib::Queryupdateinsert(const string& query)
 {
+	  pstmt = con->prepareStatement("INSERT INTO test(id) VALUES (?)");
+	  for (int i = 1; i <= 10; i++) {
+	    pstmt->setInt(1, i);
+	    pstmt->executeUpdate();
+	  }
+	  delete pstmt;
     if(mysql_query(&conn, query)) return true;
 	return false;
 }
 
-ResQuery Mysql_lib::Queryselect(const std::string& query)
+ResQuery Mysql_lib::Queryselect(const string& query)
 {
     ResQuery ressource;
 

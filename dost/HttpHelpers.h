@@ -14,6 +14,7 @@
 
 #include <string>
 #include <map>
+using namespace CoreToolkit;
 
 namespace WebToolkit
 {
@@ -76,10 +77,10 @@ public:
 	}
 	void Handle(HttpServerContext* context)
 	{
-		context->HtmlBody = FileUtils::ReadFile("template/header.html");
+		//context->HtmlBody = FileUtils::ReadFile("template/header.html");
 		(obj->*fn)(context);
-		context->HtmlBody.append(FileUtils::ReadFile("template/footer.html"));
-		Util::Substitute(context->HtmlBody, "<%basepath%>", "http://" + context->requestHeader.host, true);
+		//context->HtmlBody.append(FileUtils::ReadFile("template/footer.html"));
+		//Util::Substitute(context->HtmlBody, "<%basepath%>", "http://" + context->requestHeader.host, true);
 		context->responseBody << context->HtmlBody;
 		context->HtmlBody.clear();
 	}

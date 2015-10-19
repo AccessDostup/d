@@ -1,8 +1,13 @@
-#pragma once
 #ifndef _MYSQL_LIB_H
 #define	_MYSQL_LIB_H
 
-#include <mysql.h>
+#include "mysql_connection.h"
+
+#include <cppconn/driver.h>
+#include <cppconn/exception.h>
+#include <cppconn/resultset.h>
+#include <cppconn/statement.h>
+#include <cppconn/prepared_statement.h>
 
 #ifdef WIN32
 #include <windows.h>
@@ -17,18 +22,29 @@ namespace CoreToolkit
 
 struct ResQuery
 {
-	MYSQL_RES *res;
+	sql::ResultSet *res;
+	bool err;
+};
+
+struct InsertQuery
+{
+	string *NameTable;
+
+	sql::ResultSet *res;
 	bool err;
 };
 
 class Mysql_lib
 {
-  MYSQL conn;
-  MYSQL_ROW row;
+  sql::Driver *driver;
+  sql::Connection *con;
+  sql::Statement *stmt;
+  sql::PreparedStatement *pstmt;
+
 public:
 	static bool Connect();
-	static bool Queryupdateinsert(const std::string& query);
-	static ResQuery Queryselect(const std::string& query);
+	static bool Queryupdateinsert(const string& query);
+	static ResQuery Queryselect(const string& query);
 };
 
 }
