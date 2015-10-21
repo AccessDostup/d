@@ -42,10 +42,11 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.495319819" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
 								<option id="gnu.cpp.link.option.libs.446282458" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="&quot;wsock32&quot;"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mysqlcppconn-static"/>
+									<listOptionValue builtIn="false" value="&quot;mysqlcppconn-static&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1477970510" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\MySQL\MySQL Connector C++ 1.1.6\lib\opt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files\MySQL\MySQL Connector C++ 1.1.6\lib\opt&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\MinGW\boost_1_59_0\libs&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1272976233" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -104,6 +105,7 @@
 								</option>
 								<option id="gnu.cpp.link.option.paths.20601689" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\MySQL\MySQL Connector C++ 1.1.6\lib\opt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files\MySQL\MySQL Connector C++ 1.1.6\lib\opt&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\MinGW\boost_1_59_0\libs&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.748930826" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -146,4 +148,16 @@
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="dost" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>dost</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
 </cproject>
